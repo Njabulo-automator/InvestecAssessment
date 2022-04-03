@@ -1,0 +1,9 @@
+2021-Jul-20 07:01:25 pm [main] INFO  Utilities.ExcelUtils - Processing datasheet: C:/Users/mlungisi.ntshingila/Documents/TCH PROJECTS/Automation Projects/VPC Public Web/PW_WorkFlow.xlsx
+2021-Jul-20 07:01:25 pm [main] INFO  Utilities.ExcelUtils - Sheet Name: PwData
+2021-Jul-20 07:01:25 pm [main] INFO  Utilities.ExcelUtils - Reading workbook from file:C:/Users/mlungisi.ntshingila/Documents/TCH PROJECTS/Automation Projects/VPC Public Web/PW_WorkFlow.xlsx
+2021-Jul-20 07:01:26 pm [main] DEBUG Utilities.ExcelUtils - Reading sheet rows
+2021-Jul-20 07:01:26 pm [main] DEBUG Utilities.ExcelUtils - Getting column headers
+2021-Jul-20 07:01:26 pm [main] DEBUG Utilities.ExcelUtils - Closing file
+2021-Jul-20 07:01:26 pm [main] DEBUG Utilities.ExcelUtils - Converting data list to two-d array
+2021-Jul-20 07:01:33 pm [main] INFO  Utilities.CommonUtil - Unable to catch object see errorIndex 1 out of bounds for length 1
+2021-Jul-20 07:01:33 pm [main] INFO  Utilities.CommonUtil - Unable to find object: XPATH//input[@title='Vehicle Licence Plate Number (VLN)'][1]

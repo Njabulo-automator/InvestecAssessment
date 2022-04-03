@@ -1,0 +1,7 @@
+2021-Jul-21 05:55:55 pm [main] INFO  Utilities.ExcelUtils - Processing datasheet: C:/Users/mlungisi.ntshingila/Documents/TCH PROJECTS/Automation Projects/VPC Public Web/PW_WorkFlow.xlsx
+2021-Jul-21 05:55:55 pm [main] INFO  Utilities.ExcelUtils - Sheet Name: PwData
+2021-Jul-21 05:55:55 pm [main] INFO  Utilities.ExcelUtils - Reading workbook from file:C:/Users/mlungisi.ntshingila/Documents/TCH PROJECTS/Automation Projects/VPC Public Web/PW_WorkFlow.xlsx
+2021-Jul-21 05:55:55 pm [main] DEBUG Utilities.ExcelUtils - Reading sheet rows
+2021-Jul-21 05:55:55 pm [main] DEBUG Utilities.ExcelUtils - Getting column headers
+2021-Jul-21 05:55:55 pm [main] DEBUG Utilities.ExcelUtils - Closing file
+2021-Jul-21 05:55:55 pm [main] DEBUG Utilities.ExcelUtils - Converting data list to two-d array
