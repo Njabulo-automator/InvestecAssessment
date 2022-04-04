@@ -128,6 +128,23 @@ public class Utils {
         }
         return "data:image/png;base64,"+encodedBase64;
     }
+    
+    
+    public static String takeSnapShot(WebDriver webdriver, String fileScreenName) throws Exception {
+        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+        timeStamp = timeStamp.replace(".", "_");
+        String Screenshotpath;
+//Convert web driver object to TakeScreenshot
+        TakesScreenshot scrShot = ((TakesScreenshot) webdriver);
+//Call getScreenshotAs method to create image file
+        File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
+//Move image file to new destination
+        Screenshotpath = System.getProperty("user.dir") + "\\Screenshots\\" + fileScreenName + timeStamp + ".png";
+        File DestFile = new File(Screenshotpath);
+//Copy file at destination
+        FileUtils.copyFile(SrcFile, DestFile);
+        return Screenshotpath;
+    }
 
     private static String getScreenshotsPath1() {
         String workingDirectory = System.getProperty("user.dir");
