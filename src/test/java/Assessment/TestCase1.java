@@ -37,7 +37,7 @@ public class TestCase1 {
         public void SetUp() throws Exception {
         input = new FileInputStream("src/test/resources/selenium.properties");
         AutoPropertiesFile.load(input);
-        readData = ExcelUtils.readExcelDataFileToArray(AutoPropertiesFile.getProperty("readData"), "data");
+        readData = ExcelUtils.readExcelDataFileToArray(System.getProperty("user.dir")+"\\src\\test\\resources\\Test Data\\ReadData.xlsx", "data");
         String baseUrl =AutoPropertiesFile.getProperty("baseUrl");
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.hh.mm.ss").format(new Date());
         report = new ExtentReports(System.getProperty("user.dir") + "\\Reports\\TestCase1" + timeStamp + ".html", false);
