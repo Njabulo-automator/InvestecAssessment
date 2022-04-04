@@ -1,8 +1,8 @@
 package Utilities;
 
-//import PageObjects.LoginObj;
-import Page_Objects.PageElements;
+
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -15,18 +15,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
-import org.testng.TestRunner;
-//import za.co.absa.functionstechnology.automation.reporting.ExtentReportManager;
-//import za.co.absa.functionstechnology.automation.selenium.CommonUtil;
-//import za.co.absa.functionstechnology.automation.selenium.LocatorUtil;
-//import za.co.absa.functionstechnology.automation.selenium.WebdriverUtil;
-//import za.co.absa.functionstechnology.automation.utilities.ExcelUtils;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Random;
