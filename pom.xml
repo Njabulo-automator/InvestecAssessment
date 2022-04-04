@@ -6,19 +6,7 @@
     <artifactId>data.migration.testing.framework</artifactId>
     <packaging>jar</packaging>
     <version>1.3-SNAPSHOT</version>
-<!--    <scm>-->
-<!--        <connection>scm:git:ssh://git@bitbucket.absa.co.za:7999/fta/data.migration.testing.framework.git</connection>-->
-<!--        <developerConnection>scm:git:ssh://git@bitbucket.absa.co.za:7999/fta/data.migration.testing.framework.git</developerConnection>-->
-<!--        <url>https://bitbucket.absa.co.za/projects/FTA/repos/data.migration.testing.framework</url>-->
-<!--        <tag>HEAD</tag>-->
-<!--    </scm>-->
-<!--    <properties>-->
-<!--        <url.nexus>http://nexus.prod.ocp.absa.co.za</url.nexus>-->
-<!--        <jdk.version>1.8</jdk.version>-->
-<!--        <junit.version>4.12</junit.version>-->
-<!--        <log4j.version>1.2.17</log4j.version>-->
 
-<!--    </properties>-->
     <build>
         <finalName>data.migration</finalName>
         <resources>
@@ -93,35 +81,6 @@
             <version>3.141.59</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.slf4j</groupId>-->
-<!--            <artifactId>slf4j-api</artifactId>-->
-<!--            <version>1.5.5</version>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>org.slf4j</groupId>-->
-<!--            <artifactId>slf4j-log4j12</artifactId>-->
-<!--            <version>1.5.5</version>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/log4j/log4j &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.logging.log4j</groupId>-->
-<!--            <artifactId>log4j-api</artifactId>-->
-<!--            <version>2.13.0</version>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/log4j/log4j &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>log4j</groupId>-->
-<!--            <artifactId>log4j</artifactId>-->
-<!--            <version>1.2.17</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.logging.log4j</groupId>-->
-<!--            <artifactId>log4j-core</artifactId>-->
-<!--            <version>2.13.0</version>-->
-<!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
@@ -129,13 +88,6 @@
             <artifactId>opencsv</artifactId>
             <version>4.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-<!--        <dependency>-->
-<!--            <groupId>junit</groupId>-->
-<!--            <artifactId>junit</artifactId>-->
-<!--            <version>${junit.version}</version>-->
-<!--        </dependency>-->
-
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
@@ -158,14 +110,6 @@
             <artifactId>ooxml-schemas</artifactId>
             <version>1.3</version>
         </dependency>
-
-        <!--
-               <dependency>
-                   <groupId>log4j</groupId>
-                   <artifactId>log4j</artifactId>
-                   <version>${log4j.version}</version>
-               </dependency>
- -->
 
         <dependency>
             <groupId>com.aventstack</groupId>
@@ -274,30 +218,11 @@
             <version>3.8.0</version>
         </dependency>
 
-        <!-- Karate dependencies-->
-
-
         <dependency>
             <groupId>com.intuit.karate</groupId>
             <artifactId>karate-apache</artifactId>
             <version>0.9.6</version>
             <scope>testCase</scope>
         </dependency>
-
-
-
     </dependencies>
-
-<!--    <distributionManagement>-->
-<!--        <repository>-->
-<!--            <id>nexus</id>-->
-<!--            <name>releases</name>-->
-<!--            <url>${url.nexus}/repository/releases/</url>-->
-<!--        </repository>-->
-<!--        <snapshotRepository>-->
-<!--            <id>nexus</id>-->
-<!--            <name>snapshots</name>-->
-<!--            <url>${url.nexus}/repository/snapshots/</url>-->
-<!--        </snapshotRepository>-->
-<!--    </distributionManagement>-->
 </project>

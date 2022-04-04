@@ -1,0 +1,7 @@
+2022-Apr-04 11:44:40 AM [main] INFO  Utilities.ExcelUtils - Processing datasheet: C:/Users/QXZ2DT1/Documents/Njabs/InvestecAssessment-main/src/test/resources/Test Data/ReadData.xlsx
+2022-Apr-04 11:44:40 AM [main] INFO  Utilities.ExcelUtils - Sheet Name: data
+2022-Apr-04 11:44:40 AM [main] INFO  Utilities.ExcelUtils - Reading workbook from file:C:/Users/QXZ2DT1/Documents/Njabs/InvestecAssessment-main/src/test/resources/Test Data/ReadData.xlsx
+2022-Apr-04 11:44:41 AM [main] DEBUG Utilities.ExcelUtils - Reading sheet rows
+2022-Apr-04 11:44:41 AM [main] DEBUG Utilities.ExcelUtils - Getting column headers
+2022-Apr-04 11:44:41 AM [main] DEBUG Utilities.ExcelUtils - Closing file
+2022-Apr-04 11:44:41 AM [main] DEBUG Utilities.ExcelUtils - Converting data list to two-d array
