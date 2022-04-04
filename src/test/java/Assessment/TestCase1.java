@@ -45,7 +45,7 @@ public class TestCase1 {
         report = new ExtentReports(System.getProperty("user.dir") + "\\Reports\\TestCase1" + timeStamp + ".html", false);
 
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\QXZ2DT1\\Documents\\Njabs\\InvestecAssessment-main\\Drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -55,13 +55,6 @@ public class TestCase1 {
         System.out.println(driver.getTitle());
         System.out.println("Chrome launched successfully:" +" "+ driver.getCurrentUrl());    }
 
-    //@Test (priority=1)
-    public void Navigate() {
-
-        driver.navigate().to("https://www.investec.com/en_za/focus/money/understanding-interest-rates.html");
-        js.executeScript("window.scrollBy(0,1000)");
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-    }
 
     @Test
     public void SignUp() throws Exception {
@@ -93,13 +86,13 @@ public class TestCase1 {
         submitBtn.click();
 
         String txt=driver.findElement(By.xpath("//*[@class='col-12']/form/div[2]/div/div/div[1]/h3")).getAttribute("innerHTML");
-        System.out.println("page :" + txt);
+        System.out.println("page text is :" + txt);
 
         if (txt.equals(readData[1][5])){
-            test.log(LogStatus.PASS, "User has been signed up successfully");
+            test.log(LogStatus.PASS, "User has been signed up successfully",test.addScreenCapture(Utilities.Utils.takeSnapShot(driver,"Signed in successfully")));
         }
         else{
-            test.log(LogStatus.FAIL, "User has not been signed up successfully");
+            test.log(LogStatus.FAIL, "User has not been signed up successfully",test.addScreenCapture(Utilities.Utils.takeSnapShot(driver,"Signed in failure")));
         }
         }catch (Exception e) {
             throw e;
@@ -108,7 +101,7 @@ public class TestCase1 {
     @Test
     public void SignUpUnsuccessfully() throws Exception {
 
-        test = report.startTest("Test that user failed to sign in without selecting insight check box");
+        test = report.startTest("Test mandatory field when user sign in without selecting insight check box");
         driver.navigate().to(readData[1][3]);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,1000)");
@@ -132,14 +125,13 @@ public class TestCase1 {
         //Skipped insight selection and click submit button
         WebElement submitBtn = driver.findElement(By.xpath("//button[@type='submit']"));
         submitBtn.click();
-
-        String txt = driver.findElement(By.xpath("//div[@class='forms__error']/p[@class='forms__error-copy']")).getText(); //.getAttribute("innerHTML");
-        System.out.println("page :" + txt);
+        String txt = driver.findElement(By.xpath("//div[@class='forms__error']/p[@class='forms__error-copy']")).getText();
+        System.out.println("The text is :" + txt);
 
         if (txt.equals(readData[1][4])) {
-            test.log(LogStatus.PASS, "mandatory field validated with a message displayed");
+            test.log(LogStatus.PASS, "mandatory field validated with a message displayed",test.addScreenCapture(Utilities.Utils.takeSnapShot(driver,"Mandatory field pass")));
         } else {
-            test.log(LogStatus.FAIL, " mandatory field not validated ");
+            test.log(LogStatus.FAIL, " mandatory field not validated ",test.addScreenCapture(Utilities.Utils.takeSnapShot(driver,"Mandatory field failed")));
         }
     }
 
@@ -149,6 +141,4 @@ public class TestCase1 {
             report.flush();
             driver.quit();
         }
-
-
 }
