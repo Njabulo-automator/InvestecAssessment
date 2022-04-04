@@ -8,8 +8,24 @@ import io.restassured.specification.RequestSpecification;
 
 public class apiTestCase1 {
 
+    public Properties AutoPropertiesFile = new Properties();
+    public Utilities.ExcelUtils ExcelUtils = new ExcelUtils();
+    public InputStream input = null;
+    static ExtentTest test;
+    static ExtentReports report;
 
-    public static void main(String[] args) {
+
+
+    @BeforeTest
+    public void setup(){
+        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.hh.mm.ss").format(new Date());
+        report = new ExtentReports(System.getProperty("user.dir") + "\\Reports\\apiTestCase1" + timeStamp + ".html", false);
+    }
+
+
+    @Test
+    public void TestExecution() {
+        test = report.startTest("api test");
 // TODO Auto-generated method stub
         RestAssured.baseURI = "https://swapi.dev/api/people/";
 
@@ -22,7 +38,7 @@ public class apiTestCase1 {
         System.out.println("#########");
         //convert JSON to string
         JsonPath j = new JsonPath(response.asString());
-
+        test.log(LogStatus.INFO,"<b> The response body is </b> </br>" +responseBody);
         //get values of JSON array after getting array size
         int s = j.getInt("results.size()");
         for(int i = 0; i < s; i++) {
@@ -31,11 +47,22 @@ public class apiTestCase1 {
             //check if condition meets
             if(name.equalsIgnoreCase("R2-D2") && skin_color.contains("white") && skin_color.contains("blue")) {
 
-                System.out.println("Test Passed Skin Color -"+skin_color);
-                System.out.println("Test Passed name - "+name);
-                break;
+                    test.log(LogStatus.PASS, "Test Passed Skin Color -"+skin_color+ " Test Passed name "+name );
+
+               break;
+            }
+            else if(i==s) {
+                test.log(LogStatus.FAIL, "Testing colour and name not found");
+
             }
         }
+
+    }
+
+    @AfterClass
+    public void endTest() {
+        report.endTest(test);
+        report.flush();
 
     }
 
