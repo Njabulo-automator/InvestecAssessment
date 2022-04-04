@@ -102,7 +102,7 @@ public class TestCase1 {
         test = report.startTest("Test mandatory field when user sign in without selecting insight check box");
         driver.navigate().to(readData[1][3]);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,1000)");
+        js.executeScript("window.scrollBy(0,-500)");
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
         //click sin in button and populate data from excel
